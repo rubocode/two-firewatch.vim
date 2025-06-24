@@ -273,7 +273,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_color_removed  = 'e05252'
 
     let s:syntax_fg               = s:uno_2
-    let s:syntax_bg               = '282c34'
+    let s:syntax_bg               = '121212'
     let s:syntax_accent           = '56b6c2'
     let s:syntax_gutter           = '636d83'
     let s:syntax_selection        = '3e4452'
@@ -282,8 +282,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   endif
 
   " neovim :terminal colors
-  let g:terminal_color_0 = "#282c34"
-  let g:terminal_color_8 = "#282c34"
+  let g:terminal_color_0 = "#121212"
+  let g:terminal_color_8 = "#121212"
   let g:terminal_color_1 = "#e06c75"
   let g:terminal_color_9 = "#e06c75"
   let g:terminal_color_2 = "#98c379"
