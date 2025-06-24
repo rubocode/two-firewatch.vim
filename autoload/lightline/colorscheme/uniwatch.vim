@@ -33,5 +33,5 @@ if exists('g:lightline')
   let s:p.normal.error = [ [ s:bg, s:red ] ]
   let s:p.normal.warning = [ [ s:bg, s:orange ] ]
 
-  let g:lightline#colorscheme#twofirewatch#palette = lightline#colorscheme#fill(s:p)
+  let g:lightline#colorscheme#uniwatch#palette = lightline#colorscheme#fill(s:p)
 endif
