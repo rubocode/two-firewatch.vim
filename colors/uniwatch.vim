@@ -3,7 +3,7 @@
 " License: MIT
 " Version: 1.0.0
 
-- Global setup =============================================================={{{
+" Global setup =============================================================={{{
 
 hi clear
 syntax reset
@@ -273,7 +273,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_color_removed  = 'e05252'
 
     let s:syntax_fg               = s:uno_2
-    let s:syntax_bg               = '121212' -- '282c34'
+    let s:syntax_bg               = '282c34'
     let s:syntax_accent           = '56b6c2'
     let s:syntax_gutter           = '636d83'
     let s:syntax_selection        = '3e4452'
