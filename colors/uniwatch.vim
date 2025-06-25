@@ -16,6 +16,8 @@ if !exists('g:uniwatch_italics')
   let g:uniwatch_italics = 0
 endif
 
+let g:t_Co = 256
+
 if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " functions
   " returns an approximate grey index for the given grey level
