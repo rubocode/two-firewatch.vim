@@ -278,7 +278,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_bg               = '080808'
     let s:syntax_accent           = '56b6c2'
     let s:syntax_gutter           = '636d83'
-    let s:syntax_selection        = '00afff'
+    let s:syntax_selection        = '008787'
     let s:syntax_fold_bg          = '5c6370'
     let s:syntax_cursor_line      = '2c323c'
   endif
