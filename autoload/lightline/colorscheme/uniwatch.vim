@@ -1,7 +1,7 @@
 if exists('g:lightline')
   
   let s:bg = '#121212'
-  let s:fg = '#abb2bf'
+  let s:fg = '#8B929F'
   let s:gray1 = '#3e4452'
   let s:gray2 = '#2c323c'
   let s:gray3 = '#55606d'
