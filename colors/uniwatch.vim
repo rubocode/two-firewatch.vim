@@ -144,6 +144,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " returns the actual color level for the given color index
   fun <SID>rgb_level(n)
+		vim.notify('Inside rgb_level')
+		
     if &t_Co == 88
       if a:n == 0
         return 0
