@@ -167,6 +167,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " returns the palette index for the given R/G/B color indices
   fun <SID>rgb_color(x, y, z)
+		echom "Inside rgb_color: " . a:x . "," . a:y . "," . a:z
+
     if &t_Co == 88
       return 16 + (a:x * 16) + (a:y * 4) + a:z
     else
