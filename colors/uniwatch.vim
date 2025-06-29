@@ -144,7 +144,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " returns the actual color level for the given color index
   fun <SID>rgb_level(n)
-		echom "Inside rgb_level: " . a:n
+		" echom "Inside rgb_level: " . a:n
 		
     if &t_Co == 88
       if a:n == 0
@@ -167,7 +167,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " returns the palette index for the given R/G/B color indices
   fun <SID>rgb_color(x, y, z)
-		echom "Inside rgb_color: " . a:x . ", " . a:y . ", " . a:z
+		" echom "Inside rgb_color: " . a:x . ", " . a:y . ", " . a:z
 
     if &t_Co == 88
       return 16 + (a:x * 16) + (a:y * 4) + a:z
@@ -178,7 +178,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " returns the palette index to approximate the given R/G/B color levels
   fun <SID>color(r, g, b)
-		echom "Inside color: " . a:r . ", " . a:g . ", " . a:b
+		" echom "Inside color: " . a:r . ", " . a:g . ", " . a:b
    
 		" get the closest grey
     let l:gx = <SID>grey_number(a:r)
@@ -226,26 +226,28 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
-		echom "--------"
-		echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
+		if fg == uno_1
+			echom "--------"
+			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
+		
+    	let l:attr = a:attr
+    	if g:uniwatch_italics == 0 && l:attr ==? 'italic'
+      	let l:attr = 'none'
+    	endif
 
-    let l:attr = a:attr
-    if g:uniwatch_italics == 0 && l:attr ==? 'italic'
-      let l:attr = 'none'
-    endif
-
-    if a:fg !=? ''
-      echom 'hi ' . a:group . ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
-      exec 'hi ' . a:group . ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
-    endif
-    if a:bg !=? ''
-      echom 'hi ' . a:group . ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
-      exec 'hi ' . a:group . ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
-    endif
-    if a:attr !=? ''
-      echom 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
-      exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
-    endif
+    	if a:fg !=? ''
+      	echom 'hi ' . a:group . ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
+      	exec 'hi ' . a:group . ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
+    	endif
+    	if a:bg !=? ''
+      	echom 'hi ' . a:group . ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
+      	exec 'hi ' . a:group . ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
+    	endif
+    	if a:attr !=? ''
+      	echom 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
+      	exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
+    	endif
+		endif
   endfun
 
   "}}}
