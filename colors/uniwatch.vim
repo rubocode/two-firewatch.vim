@@ -227,7 +227,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
 		
-		if a:fg ==  s:syntax_color_removed
+		if a:bg ==  s:syntax_bg
 			echom "--------"
 			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
 		
