@@ -247,6 +247,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
       	echom 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
       	exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     	endif
+		endif
   endfun
 
   "}}}
