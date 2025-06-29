@@ -229,7 +229,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 		
 		if a:fg ==  s:uno_1
 			echom "--------"
-			echom a:watch
 			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
 		
     	let l:attr = a:attr
@@ -278,7 +277,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_fold_bg          = 'd1cec7'
     let s:syntax_cursor_line      = 'F3EFE7'
   else
-    let s:uno_1 = 'd6e9ff'
+    let s:uno_1 = '33a0ff'
     let s:uno_2 = 'abb2bf'
     let s:uno_3 = '6e88a6'
     let s:uno_4 = '55606d'
