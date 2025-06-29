@@ -226,8 +226,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
-		if a:fg == s:duo_3
+		let a:watch = '33a0ff'
+		if a:fg == a:watch or a:bg == a:watch
 			echom "--------"
+			echom a:watch
 			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
 		
     	let l:attr = a:attr
