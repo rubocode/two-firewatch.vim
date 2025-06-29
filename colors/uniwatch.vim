@@ -227,7 +227,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
 		
-		if a:fg ==  s:syntax_gutter
+		if a:fg ==  s:uno_1
 			echom "--------"
 			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
 		
@@ -277,7 +277,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_fold_bg          = 'd1cec7'
     let s:syntax_cursor_line      = 'F3EFE7'
   else
-    let s:uno_1 = '33a0ff'
+    let s:uno_1 = '636d83'
+
     let s:uno_2 = 'abb2bf'
     let s:uno_3 = '6e88a6'
     let s:uno_4 = '55606d'
