@@ -226,7 +226,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
-		if fg == uno_1
+		if a:fg == s:uno_1 
 			echom "--------"
 			echom "Inside X: group: " . a:group . ", fg: " . a:fg . ", bg: " . a:bg . " attr: " . a:attr
 		
@@ -247,7 +247,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
       	echom 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
       	exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     	endif
-		endif
   endfun
 
   "}}}
