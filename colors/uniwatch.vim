@@ -277,7 +277,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:syntax_fold_bg          = 'd1cec7'
     let s:syntax_cursor_line      = 'F3EFE7'
   else
-    let s:uno_1 = '636d83'
+    let s:uno_1 = 'DDDDDD'
 
     let s:uno_2 = 'abb2bf'
     let s:uno_3 = '6e88a6'
